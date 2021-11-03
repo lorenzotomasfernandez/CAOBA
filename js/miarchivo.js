@@ -20,10 +20,11 @@ let verificacionHumano = prompt("La suma de "+ numero + " y "+ numero2 + " es: "
 
 
 // Desafio "Crear algoritmo con un condicional"
-let numero3 = parseFloat(prompt("Ingrese otro numero"))
+
+let numero3 = parseFloat(prompt("Ingrese otro numero"));
 //Se pide ingresar cualquier numero
 
 if(numero3>10 && numero3<50){
-    alert(El numero esta entre 10 y 50)
+    alert("El numero esta entre 10 y 50")
 }
 // En caso de que el numero este entre 10 y 50 se mostrara una alerta
