@@ -1,3 +1,5 @@
+// Desafio "Crear un algoritmo JS simple"
+
 alert("¡Hola! Antes de avanzar necesitas completar ciertos datos");
 // Una alerta en la cual aclara que se necesitan completar ciertos datos para poder seguir en la pagina web
 
@@ -16,3 +18,12 @@ let numero = prompt("Ingresar un numero");
 let verificacionHumano = prompt("La suma de "+ numero + " y "+ numero2 + " es: ");
 // Se realiza una suma de los numeros elegidos anteriormente
 
+
+// Desafio "Crear algoritmo con un condicional"
+let numero3 = parseFloat(prompt("Ingrese otro numero"))
+//Se pide ingresar cualquier numero
+
+if(numero3>10 && numero3<50){
+    alert(El numero esta entre 10 y 50)
+}
+// En caso de que el numero este entre 10 y 50 se mostrara una alerta
