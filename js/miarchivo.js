@@ -33,6 +33,7 @@ if(numero3>10 && numero3<50){
 // Desafio "Crear un algoritmo utilizando un ciclo"
 
 let numero4 = parseInt(prompt("Ingresar un numero entero: "));
-for (let index = 0; index < numero4 ; index++) {
+// Se crea una variable en el cual el usuario debe ingresar un numero entero 
+for (let i = 0; i < numero4 ; i++) {
     alert("Hola");
 }
