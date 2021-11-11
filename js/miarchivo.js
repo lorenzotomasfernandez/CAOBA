@@ -37,3 +37,21 @@ let numero4 = parseInt(prompt("Ingresar un numero entero: "));
 for (let i = 0; i < numero4 ; i++) {
     alert("Hola");
 }
+
+//Desafio "Simulador interactivo"
+
+function producto(precio) {
+
+    let descuento = 0.50;
+    
+    let precioDelProducto = parseFloat(precio * descuento);
+  
+    return precioDelProducto;
+
+}
+
+let resultado = producto("400");
+// 400 seria el parametro precio
+
+alert(resultado)
+
