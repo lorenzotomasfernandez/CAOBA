@@ -54,4 +54,47 @@ let resultado = producto("400");
 // 400 seria el parametro precio
 
 alert(resultado)
+// Desafio complementario "Funciones relacionadas"
+
+let precio = parseInt(prompt("Ingrese el precio del producto: "))
+let impuesto = 0.21;
+
+function precioDelProducto(precio) {
+    if (precio != 0 && precio != "") {
+        alert("El precio ingresado es: " + precio);
+    }
+}
+
+function sumarImpuesto(precio) {
+    alert("Debemos sumarle el 21% de impuestos")
+    let precioConImpuesto = parseFloat(precio * impuesto);
+    return precioConImpuesto;
+}
+
+function precioFinal(valorFinal) {
+    alert("El precio final es: " + valorFinal);
+}
+
+precioDelProducto(precio);
+let precioConImpuesto = sumarImpuesto(precio);
+precioFinal(precioConImpuesto);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
