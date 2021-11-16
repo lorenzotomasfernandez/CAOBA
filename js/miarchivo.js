@@ -79,22 +79,22 @@ precioDelProducto(precio);
 let precioConImpuesto = sumarImpuesto(precio);
 precioFinal(precioConImpuesto);
 
+// Desafio Incorporar objetos
 
+class Producto {
+    
+    constructor(marca, precio) {
+        this.marca = prompt("Ingresar el nombre del producto: ");
+        this.precio = parseFloat(prompt("Ingrese el precio del producto: "));
+    }
+    impuesto(){
+        return this.precio * 0.21;
+    }
+    
+    mostrar(){
+        alert("Este es el producto de "+this.marca+" con el precio de: $"+this.impuesto());
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const producto1 = new Producto();
+producto1.mostrar();
