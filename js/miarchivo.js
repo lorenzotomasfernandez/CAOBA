@@ -98,3 +98,13 @@ class Producto {
 
 const producto1 = new Producto();
 producto1.mostrar();
+
+// Desafio "Incorporar arrays"
+
+let nombreDelProductoALlevar = prompt("Ingrese el nombre del producto a llevar: ")
+const productoALlevar = [nombreDelProductoALlevar];
+alert(" Va a llevar " + productoALlevar.length + " producto " ); 
+
+
+
+
