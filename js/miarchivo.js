@@ -68,16 +68,17 @@ function  precioDelProducto (precio)  {
 function  sumarImpuesto ( precio )  {
     alert ( "Debemos sumarle el 21% de impuestos" )
     let  precioConImpuesto  =  parseFloat(precio*impuesto);
-    return  precioConImpuesto;
+    let precioFinalConImpuesto = precio + precioConImpuesto;
+    return  precioFinalConImpuesto;
 }
 
-function  precioFinal (valorFinal)  {
+function  precioFinal1 (valorFinal)  {
     alert ( "El precio final es: "  +  valorFinal ) ;
 }
 
 precioDelProducto (precio) ;
-let  precioConImpuesto  =  sumarImpuesto(precio) ;
-precioFinal(precioConImpuesto);
+let  precioFinalConImpuesto  =  sumarImpuesto(precio) ;
+precioFinal1(precioFinalConImpuesto);
 
 // Desafio Incorporar objetos
 
@@ -90,9 +91,11 @@ class  Producto{
     impuesto(){
         return this.precio*0.21;
     }
-    
+    precioFinal(){
+        return this.precio+this.impuesto()
+    }
     mostrar(){
-        alert( "Este es el producto de " + this.marca + " con el precio de: $" + this.impuesto() ) ;
+        alert( "Este es el producto de " + this.marca + " con el precio de: $" + this.precioFinal() ) ;
     }
 }
 
@@ -115,10 +118,10 @@ let precioOriginalP1 = producto2.precio;
 let precioOriginalP2 = producto3.precio;
 let precioOriginalP3 = producto4.precio;
 
-let preciosDeTodosLosProductos = (precioOriginalP1,precioOriginalP2,precioOriginalP3);
-preciosDeTodosLosProductos.sort(ordenar);
+const preciosDeTodosLosProductos = [precioOriginalP1,precioOriginalP2,precioOriginalP3];
+const preciosFinales = preciosDeTodosLosProductos.sort(ordenar);
 function ordenar(a, b){
     return a-b
 }
 
-alert(preciosDeTodosLosProductos);
+alert(preciosFinales);
