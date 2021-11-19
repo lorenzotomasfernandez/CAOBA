@@ -83,7 +83,7 @@ precioFinal1(precioFinalConImpuesto);
 // Desafio Incorporar objetos
 
 class  Producto{
-    
+
     constructor ( marca ,  precio )  {
         this.marca  =  prompt ( "Ingresar el nombre del producto: " ) ;
         this.precio  =  parseFloat(prompt("Ingrese el precio del producto: "));
@@ -104,11 +104,15 @@ producto1.mostrar();
 
 // Desafio "Incorporar arrays"
 
+// Se va a indicar cuantos productos lleva
+
 let  nombreDelProductoALlevar  =  prompt ( "Ingrese el nombre del producto a llevar:" )
 const  productoALlevar  =  [nombreDelProductoALlevar] ;
 alert ( "Va a llevar "  +  productoALlevar.length +  " producto "  ) ; 
 
 // Desafio complementario "Ordenar un array de objetos"
+
+// El objetivo es ordenar los precios de menor a mayor
 
 let producto2 = new Producto();
 let producto3 = new Producto();
