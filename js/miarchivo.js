@@ -59,7 +59,7 @@ alert(resultado)
 let  precio  =  parseInt ( prompt ( "Ingrese el precio del producto:" ) )
 let  impuesto  =  0.21 ;
 
-function  precioDelProducto (precio )  {
+function  precioDelProducto (precio)  {
     if  ( precio  !=  0  &&  precio  !=  "" )  {
         alert ( "El precio ingresado es: "  +  precio ) ;
     }
@@ -67,16 +67,16 @@ function  precioDelProducto (precio )  {
 
 function  sumarImpuesto ( precio )  {
     alert ( "Debemos sumarle el 21% de impuestos" )
-    let  precioConImpuesto  =  parseFloat ( precio  *  impuesto ) ;
-    return  precioConImpuesto ;
+    let  precioConImpuesto  =  parseFloat(precio*impuesto);
+    return  precioConImpuesto;
 }
 
-function  precioFinal ( valorFinal )  {
+function  precioFinal (valorFinal)  {
     alert ( "El precio final es: "  +  valorFinal ) ;
 }
 
-precioDelProducto ( precio ) ;
-let  precioConImpuesto  =  sumarImpuesto ( precio ) ;
+precioDelProducto (precio) ;
+let  precioConImpuesto  =  sumarImpuesto(precio) ;
 precioFinal(precioConImpuesto);
 
 // Desafio Incorporar objetos
@@ -88,11 +88,11 @@ class  Producto{
         this.precio  =  parseFloat(prompt("Ingrese el precio del producto: "));
     }
     impuesto(){
-        return  this.precio * 0,21 ;
+        return this.precio*0.21;
     }
     
     mostrar(){
-        alert( "Este es el producto de " + this.marca + " con el precio de: $" + this.impuesto()) ;
+        alert( "Este es el producto de " + this.marca + " con el precio de: $" + this.impuesto() ) ;
     }
 }
 
