@@ -1,0 +1,25 @@
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.stories{
+    background-color:brown;
+    color: white;
+    text-align: center;
+}
+
+nav.navbar {
+    background-color:brown;
+}
+
+main{
+    background-color: white;
+}
+
+.img-producto{
+    margin: 5vh;
+}
