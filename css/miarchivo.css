@@ -23,3 +23,13 @@ main{
 .img-producto{
     margin: 5vh;
 }
+
+.img{
+    transform: scale(1,1);
+    transition: all 1s;
+}
+
+.img:hover {
+    padding: 5px;
+    background-color: brown;
+}

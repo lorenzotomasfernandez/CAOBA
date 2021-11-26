@@ -129,3 +129,9 @@ function ordenar(a, b){
 }
 
 alert(preciosFinales);
+
+//Desafio: "Interactuar con HTML"
+
+let borrarElemento = document.getElementById("Borrar");
+borrarElemento.parentNode.removeChild(borrarElemento);
+
