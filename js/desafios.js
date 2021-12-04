@@ -1,4 +1,4 @@
-// Desafio "Crear un algoritmo JS simple"
+
 
 alert ( "¡Hola! Antes de avanzar necesitas completar ciertos datos" ) ;
 
@@ -117,12 +117,6 @@ alert(preciosFinales);
 
 let borrarElemento = document.getElementById("Borrar");
 borrarElemento.parentNode.removeChild(borrarElemento);
-
-//Modal
-
-$(document).ready(function () {
-    $('.toast').toast('show');
-});
 
 //Desafio "Incorporar elementos"
 

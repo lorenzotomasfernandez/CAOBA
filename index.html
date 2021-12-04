@@ -17,7 +17,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       
-        <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+        <div class="navbar-collapse collapse" id="navbarsExample01">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="./paginas/productos.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PRODUCTOS </font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(Actual)</font></font></span></a>
@@ -33,9 +33,6 @@
                 <a class="dropdown-item" href="./paginas/ayuda.html#tres"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TALLES</font></font></a>
                 <a class="dropdown-item" href="./paginas/ayuda.html#cuatro"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ENVIOS</font></font></a>
               </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./paginas/iniciarsesion.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MI CUENTA</font></font></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./paginas/carrito.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CARRITO</font></font></a>
@@ -91,25 +88,43 @@
         <div class=" row">
          <div class="col-8"> 
           <p>¡SUSCRIBITE A NUESTRO NEWSLETTER! </p>
-        <form id="">
+        <form id="formulario">
         <div class="col-6">
-        <input id="correo" class="form-control mr-sm-2" type="text" placeholder="Email" aria-label="email">
+        <input id="inputMail" class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="email">
         </div> 
         <div class="col-4 mt-2">  
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="validar correo" onclick="validarCorreo(form.correo.value)">SUSCRIBITE</button>
+        <button id="botonSuscribete" class="btn btn-outline-success my-2 my-sm-0" type="button">SUSCRIBITE</button>
         </div>
        </form>
          </div>
          <div class="col 4">
            <ul>
              <li> <a href="./paginas/ayuda.html">AYUDA</a> </li>
-             <li> <a href="./paginas/outfits.html">OUTFITS</a> </li>
              <li> <a href="./paginas/contactanos.html">CONTACTANOS</a> </li>
            </ul>
          </div>
       </div>    
       <div id="Borrar" >Elemento a borrar</div>
       </footer>
+
+      <div id="modalSuscribete" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Se ha suscrito a nuestro newsletter</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span id="botonCruz" aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="texto">¡Va a recibir mas novedades via mail!</p>
+            </div>
+            <div class="modal-footer">
+              <button id="botonCerrar" type="button" class="btn btn-secondary" data-dismiss="modal" >Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
         <div class="toast" data-autohide="false">
@@ -121,11 +136,9 @@
                 Te damos la bienvenida a la pagina de CAOBA.
             </div>
         </div>
-    </div>
 
-      
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <script src="./js/miarchivo.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

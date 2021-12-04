@@ -17,7 +17,7 @@
            <span class="navbar-toggler-icon"></span>
          </button>
        
-         <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+         <div class="navbar-collapse collapse" id="navbarsExample01">
            <ul class="navbar-nav mr-auto">
              <li class="nav-item active">
                <a class="nav-link" href="./productos.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PRODUCTOS </font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(Actual)</font></font></span></a>
@@ -35,9 +35,6 @@
                </div>
              </li>
              <li class="nav-item">
-               <a class="nav-link" href="./iniciarsesion.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MI CUENTA</font></font></a>
-             </li>
-             <li class="nav-item">
                <a class="nav-link" href="./carrito.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CARRITO</font></font></a>
              </li>
            </ul>
@@ -49,60 +46,9 @@
     <main style="margin: 4rem;">
       <div class="container">
         <div class="py-5 text-center">
-          <img class="d-block mx-auto mb-4" src="../imagenes/caoba-logo.jpg" alt="" width="72" height="72">
           <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Formulario de pago</font></font></h2>
         </div>
-      
-        <div class="row">
-          <div class="col-md-4 order-md-2 mb-4">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-              <span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tu carrito</font></font></span>
-              <span class="badge badge-secondary badge-pill"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></span>
-            </h4>
-            <ul class="list-group mb-3">
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nombre del producto</font></font></h6>
-                  <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Breve descripción</font></font></small>
-                </div>
-                <span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 12</font></font></span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Segundo producto</font></font></h6>
-                  <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Breve descripción</font></font></small>
-                </div>
-                <span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 8</font></font></span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tercer artículo</font></font></h6>
-                  <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Breve descripción</font></font></small>
-                </div>
-                <span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 5</font></font></span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between bg-light">
-                <div class="text-success">
-                  <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Código promocional</font></font></h6>
-                  <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EJEMPLO CÓDIGO</font></font></small>
-                </div>
-                <span class="text-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- $ 5</font></font></span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between">
-                <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total (USD)</font></font></span>
-                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 20</font></font></strong>
-              </li>
-            </ul>
-      
-            <form class="card p-2">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Código promocional">
-                <div class="input-group-append">
-                  <button type="submit" class="btn btn-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Canjear</font></font></button>
-                </div>
-              </div>
-            </form>
-          </div>
+        
           <div class="col-md-8 order-md-1">
             <h4 class="mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dirección de Envio</font></font></h4>
             <form class="needs-validation" novalidate="">
@@ -122,20 +68,7 @@
                   </div>
                 </div>
               </div>
-      
-              <div class="mb-3">
-                <label for="username"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nombre de usuario</font></font></label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@</font></font></span>
-                  </div>
-                  <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required="">
-                  <div class="invalid-feedback" style="width: 100%;">
-                    Your username is required.
-                  </div>
-                </div>
-              </div>
-      
+
               <div class="mb-3">
                 <label for="email"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Correo electrónico </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></span></label>
                 <input type="email" class="form-control" id="email" placeholder="you@example.com">
@@ -252,36 +185,74 @@
                 </div>
               </div>
               <hr class="mb-4">
-              <button class="btn btn-primary btn-lg btn-block" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">COMPRAR</font></font></button>
+              <button id="botonComprar" class="btn btn-primary btn-lg btn-block" type="button">COMPRAR</font></font></button>
             </form>
           </div>
         </div>
     </main>
 
-    <footer class= "container-fluid mt-5 mb-5">
+    <footer class= "container-fluid mb-5">
       <div class=" row">
        <div class="col-8"> 
         <p>¡SUSCRIBITE A NUESTRO NEWSLETTER! </p>
-      <form>
+      <form id="formulario">
       <div class="col-6">
-      <input class="form-control mr-sm-2" type="Correo electronico" placeholder="Email" aria-label="email">
+      <input id="inputMail" class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="email">
       </div> 
       <div class="col-4 mt-2">  
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SUSCRIBITE</button>
+      <button id="botonSuscribete" class="btn btn-outline-success my-2 my-sm-0" type="button">SUSCRIBITE</button>
       </div>
      </form>
        </div>
        <div class="col 4">
          <ul>
-           <li> <a href="./ayuda.html">AYUDA</a> </li>
-           <li> <a href="./outfits.html">OUTFITS</a> </li>
-           <li> <a href="./contactanos.html">CONTACTANOS</a> </li>
+           <li> <a href="./paginas/ayuda.html">AYUDA</a> </li>
+           <li> <a href="./paginas/contactanos.html">CONTACTANOS</a> </li>
          </ul>
        </div>
     </div>    
     </footer>
+    
+    <div id="modalComprar" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Se ha realizado su compra</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span id="botonCruzComprar" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="texto">¡Gracias por confiar en nosotros!</p>
+          </div>
+          <div class="modal-footer">
+            <button id="botonCerrarComprar" type="button" class="btn btn-secondary" data-dismiss="modal" >Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalSuscribete" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Se ha suscrito a nuestro newsletter</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span id="botonCruz" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="texto">¡Va a recibir mas novedades via mail!</p>
+          </div>
+          <div class="modal-footer">
+            <button id="botonCerrar" type="button" class="btn btn-secondary" data-dismiss="modal" >Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="../js/carrito.js"></script>
   </body>
 </html>
