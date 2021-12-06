@@ -39,9 +39,70 @@ let abrirComprar = document.getElementById("botonComprar");
 let cerrarCruzComprar = document.getElementById("botonCruzComprar");
 let cerrarComprar = document.getElementById("botonCerrarComprar");
 
+let nombre = document.getElementById("nombre");
+let apellido = document.getElementById("apellido");
+let email = document.getElementById("email");
+let direccion = document.getElementById("direccion");
+let nombreTarjeta = document.getElementById("nombreTarjeta");
+let numeroTarjeta = document.getElementById("numeroTarjeta");
+let vencimiento = document.getElementById("vencimiento");
+let cvv = document.getElementById("cvv");
+
+let nombreValue = "";
+let apellidoValue = "";
+let emailValue = "";
+let direccionValue = "";
+let nombreTarjetaValue = "";
+let numeroTarjetaValue = "";
+let vencimientoValue = "";
+let cvvValue = "";
+
+abrirComprar.onclick = function() {
+  if (){
+        modalComprar.style.display = "block";
+    }
+}
+
+nombre.addEventListener("change", function(e){
+  nombreValue = e.target.value;
+});
+
+apellido.addEventListener("change", function(e){
+  apellidoValue = e.target.value;
+});
+
+email.addEventListener("change", function(e){
+  emailValue = e.target.value;
+});
+
+direccion.addEventListener("change", function(e){
+  direccionValue = e.target.value;
+});
+
+numeroTarjeta.addEventListener("change", function(e){
+  numeroTarjetaValue = e.target.value;
+});
+
+nombreTarjeta.addEventListener("change", function(e){
+  nombreTarjetaValue = e.target.value;
+});
+
+vencimiento.addEventListener("change", function(e){
+  vencimientoValue = e.target.value;
+});
+
+cvv.addEventListener("change", function(e){
+  cvvValue = e.target.value;
+});
+
+
 modalComprar.onclick = function() {
-    modalComprar.style.display = "block";
+    modalComprar.style.display = "none";
   }
+
+abrirComprar.onclick = function() {
+  modalComprar.style.display = "block";
+}
 
 cerrarCruzComprar.onclick = function() {
     modalComprar.style.display = "none";

@@ -31,3 +31,58 @@ window.onclick = function(event) {
 function validacionEmail(e) {
   inputValue = e.target.value;
 }
+
+//Carrito
+const product = document.getElementById("product");
+let listProduct = ''
+let itemCart = ''
+
+let carrito = [];
+
+function agregarAlCarrito(productoId) {
+  const cart = productosData.filter( function (product) {
+   return product.id === productoId;
+  })
+  carrito.push(cart)
+  localStorage.setItem("PRODUCT", JSON.stringify(carrito))
+}
+
+function mostrarCarrito() {
+  const cart = JSON.parse(localStorage.getItem("PRODUCT"))
+  let renderCart = ''
+  cart.map( function (products) {
+    return products.map(
+      function (product) {
+        return renderCart += `
+        <div>
+          <h1>${product.title}</h1>
+          <button class="btn btn-dark mt-2 mb-2" type="button"><a href="./carrito.html">COMPRAR</a></button>
+        </div>`
+      }
+    )
+  })
+  document.getElementById('listado-carrito').innerHTML = renderCart;
+}
+
+function borrarCarrito() {
+  localStorage.removeItem("PRODUCT")
+  document.getElementById('listado-carrito').innerHTML = '';
+}
+
+productosData.map(product => {
+  listProduct += 
+  `<div class="card img-producto col-md-3" style="width: 18rem;">
+    <img src=../imagenes/${product.imagen} class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">${product.title}</h5>
+        <p class="card-text">${product.description}</p>
+        <p>$${product.price}</p>
+        <button onclick="agregarAlCarrito(${product?.id})" id="btn-add-cart" class="btn btn-primary">AÑADIR AL CARRITO</button>
+    </div>
+  </div>`
+})
+
+product.innerHTML = listProduct;
+
+
+

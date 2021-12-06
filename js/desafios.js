@@ -129,3 +129,18 @@ function validarCorreo(correo) {
         alert("Por favor, ingrese un correo electronico valido.")
     }
 }
+
+// Desafio complementario: "Generar HTML"
+
+productosData.map(product => {
+    listProduct += 
+    `<div class="card img-producto col-md-3" style="width: 18rem;">
+      <img src=../imagenes/${product.imagen} class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">${product.title}</h5>
+          <p class="card-text">${product.description}</p>
+          <p>$${product.price}</p>
+          <button onclick="agregarAlCarrito(${product?.id})" id="btn-add-cart" class="btn btn-primary">AÑADIR AL CARRITO</button>
+      </div>
+    </div>`
+  })
