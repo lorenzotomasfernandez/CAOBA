@@ -78,6 +78,7 @@ function mostrarCarrito() {
 function borrarCarrito() {
   localStorage.removeItem("PRODUCT")
   document.getElementById('listado-carrito').innerHTML = '';
+  carrito = [] 
 }
 
 productosData.map(product => {
