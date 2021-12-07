@@ -57,12 +57,6 @@ let numeroTarjetaValue = "";
 let vencimientoValue = "";
 let cvvValue = "";
 
-abrirComprar.onclick = function() {
-  if (){
-        modalComprar.style.display = "block";
-    }
-}
-
 nombre.addEventListener("change", function(e){
   nombreValue = e.target.value;
 });
@@ -80,7 +74,7 @@ direccion.addEventListener("change", function(e){
 });
 
 numeroTarjeta.addEventListener("change", function(e){
-  numeroTarjetaValue = e.target.value;
+  numeroTarjetaValue = Number(e.target.value);
 });
 
 nombreTarjeta.addEventListener("change", function(e){
@@ -89,20 +83,23 @@ nombreTarjeta.addEventListener("change", function(e){
 
 vencimiento.addEventListener("change", function(e){
   vencimientoValue = e.target.value;
+  console.log(e.targer.value)
 });
 
 cvv.addEventListener("change", function(e){
-  cvvValue = e.target.value;
-});
+  cvvValue = Number(e.target.value);
+})
 
+abrirComprar.onclick = function() {
+  if (nombreValue && apellidoValue && emailValue.includes("@") && direccionValue && nombreTarjetaValue &&
+  numeroTarjetaValue && numeroTarjetaValue && vencimientoValue && cvvValue) { 
+   modalComprar.style.display = "block";
+  }
+}
 
 modalComprar.onclick = function() {
     modalComprar.style.display = "none";
   }
-
-abrirComprar.onclick = function() {
-  modalComprar.style.display = "block";
-}
 
 cerrarCruzComprar.onclick = function() {
     modalComprar.style.display = "none";

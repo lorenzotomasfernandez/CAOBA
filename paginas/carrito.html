@@ -162,7 +162,7 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <label for="cc-number"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Número de Tarjeta de Crédito</font></font></label>
-                  <input type="text" class="form-control" id="numeroTarjeta" placeholder="" required="">
+                  <input type="number" class="form-control" id="numeroTarjeta" placeholder="" required="">
                   <div class="invalid-feedback">
                     Credit card number is required
                   </div>
@@ -171,14 +171,14 @@
               <div class="row">
                 <div class="col-md-3 mb-3">
                   <label for="cc-expiration"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vencimiento</font></font></label>
-                  <input type="text" class="form-control" id="vencimiento" placeholder="" required="">
+                  <input type="date" class="form-control" id="vencimiento" placeholder="" required="">
                   <div class="invalid-feedback">
                     Expiration date required
                   </div>
                 </div>
                 <div class="col-md-3 mb-3">
                   <label for="cc-cvv"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CVV</font></font></label>
-                  <input type="text" class="form-control" id="cvv" placeholder="" required="">
+                  <input type="number" class="form-control" id="cvv" placeholder="" maxlength="4" required>
                   <div class="invalid-feedback">
                     Security code required
                   </div>

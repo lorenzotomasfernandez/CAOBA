@@ -36,8 +36,21 @@ function validacionEmail(e) {
 const product = document.getElementById("product");
 let listProduct = ''
 let itemCart = ''
-
+const botonComprar = document.getElementById("botonComprar");
+const linkComprar = document.getElementById("linkComprar");
 let carrito = [];
+
+botonComprar.addEventListener("click", function () {
+  linkComprar.removeAttribute("href");
+
+  console.log(carrito, carrito.length);
+  if (carrito && carrito.length) {
+    linkComprar.setAttribute("href", "./carrito.html");
+  } else {
+    linkComprar.removeAttribute("href");
+  }
+})
+
 
 function agregarAlCarrito(productoId) {
   const cart = productosData.filter( function (product) {
@@ -50,13 +63,13 @@ function agregarAlCarrito(productoId) {
 function mostrarCarrito() {
   const cart = JSON.parse(localStorage.getItem("PRODUCT"))
   let renderCart = ''
-  cart.map( function (products) {
+  cart?.map( function (products) {
     return products.map(
       function (product) {
         return renderCart += `
         <div>
-          <h1>${product.title}</h1>
-          <button class="btn btn-dark mt-2 mb-2" type="button"><a href="./carrito.html">COMPRAR</a></button>
+          <h4>${product.title}</h4>
+          <p>$${product.price}</p>
         </div>`
       }
     )

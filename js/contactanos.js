@@ -42,6 +42,7 @@ let modal1 = document.getElementById("enviarDatos");
 let abrirModal1 = document.getElementById("enviar");
 let cerrarCruz1 = document.getElementById("cerrar");
 let cerrarModal1 = document.getElementById("cerrar1");
+
 let nombre = document.getElementById("nombre");
 let apellido = document.getElementById("apellido");
 let email = document.getElementById("mail");
