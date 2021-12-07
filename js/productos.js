@@ -41,9 +41,7 @@ const linkComprar = document.getElementById("linkComprar");
 let carrito = [];
 
 botonComprar.addEventListener("click", function () {
-  linkComprar.removeAttribute("href");
-
-  console.log(carrito, carrito.length);
+  
   if (carrito && carrito.length) {
     linkComprar.setAttribute("href", "./carrito.html");
   } else {
