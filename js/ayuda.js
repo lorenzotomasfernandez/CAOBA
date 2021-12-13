@@ -1,9 +1,9 @@
 //Suscripcion a newsletter
-let modal = document.getElementById("modalSuscribete");
-let abrirModal = document.getElementById("botonSuscribete");
-let cerrarCruz = document.getElementById("botonCruz");
-let cerrarModal = document.getElementById("botonCerrar");
-let inputEmail = document.getElementById("inputMail");
+let modal = $("#modalSuscribete");
+let abrirModal = $("#botonSuscribete");
+let cerrarCruz = $("#botonCruz");
+let cerrarModal = $("#botonCerrar");
+let inputEmail = $("#inputMail");
 let inputValue = "";
 
 inputEmail.addEventListener("change", validacionEmail)
