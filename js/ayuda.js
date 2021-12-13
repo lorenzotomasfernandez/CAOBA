@@ -6,28 +6,32 @@ let cerrarModal = $("#botonCerrar");
 let inputEmail = $("#inputMail");
 let inputValue = "";
 
-inputEmail.addEventListener("change", validacionEmail)
+inputEmail.on("change",function(){ validacionEmail(
+)})
 
-abrirModal.onclick = function() {
-    if (inputValue.includes("@")) {
-      modal.style.display = "block";
+abrirModal.click (function() {
+    if (inputValue.includes("@" && ".com")) {
+      modal.css("display","block");
     }
   }
+);
 
-cerrarCruz.onclick = function() {
-    modal.style.display = "none";
+cerrarCruz.click (function() {
+  modal.css("display","none");
 } 
+);
 
-cerrarModal.onclick = function() {
-    modal.style.display = "none";
+cerrarModal.click (function() {
+  modal.css("display","none");
 } 
+);
 
 window.onclick = function(event) {
     if (event.target == modal) {
-      modal.style.display = "none";
+      modal.css("display","none");
     }
 }
 
 function validacionEmail(e) {
-  inputValue = e.target.value;
+  inputValue = $("#inputMail").val();
 }
