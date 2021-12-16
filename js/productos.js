@@ -32,6 +32,21 @@ function validacionEmail(e) {
   inputValue = e.target.value;
 }
 
+//Animacion
+$(document).ready(function(){
+  $("#ver_ocultar").click(function(){
+     if($(this).hasClass('visualizar')){
+        $(this).removeClass('visualizar');
+        $(this).html('Ocultar texto');
+        $("#caja").fadeIn(500);
+     }else{
+        $(this).addClass('visualizar');
+        $(this).html('Ver texto');
+        $("#caja").fadeOut(500);
+     }
+  });
+});
+
 //Carrito
 const product = document.getElementById("product");
 let listProduct = ''
@@ -75,13 +90,14 @@ function mostrarCarrito() {
   document.getElementById('listado-carrito').innerHTML = renderCart;
 }
 
+
 function borrarCarrito() {
   localStorage.removeItem("PRODUCT")
   document.getElementById('listado-carrito').innerHTML = '';
   carrito = [] 
 }
 
-productosData.map(product => {
+/*productosData.map(product => {
   listProduct += 
   `<div class="card img-producto col-md-3" style="width: 18rem;">
     <img src=../imagenes/${product.imagen} class="card-img-top" alt="...">
@@ -92,9 +108,27 @@ productosData.map(product => {
         <button onclick="agregarAlCarrito(${product?.id})" id="btn-add-cart" class="btn btn-primary">AÑADIR AL CARRITO</button>
     </div>
   </div>`
-})
+}) */
 
-product.innerHTML = listProduct;
+// product.innerHTML = listProduct;
 
+const URL_PRECIOS = "./json/productosData.json";
 
+$.get(URL_PRECIOS, function(respuesta,state) {
+  if (state == "success") {
+    respuesta.foreach(product => {
+      $(".row").append(
+      `<div class="card img-producto col-md-3" style="width: 18rem;">
+      <img src=../imagenes/${product.imagen} class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">${product.title}</h5>
+          <p class="card-text">${product.description}</p>
+          <p>$${product.price}</p>
+          <button onclick="agregarAlCarrito(${product?.id})" id="btn-add-cart" class="btn btn-primary">AÑADIR AL CARRITO</button>
+      </div>
+    </div>`
+      )
+    })
+  }
+});
 

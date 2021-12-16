@@ -114,3 +114,18 @@ window.onclick = function(event) {
       modalComprar.style.display = "none";
     }
   }
+
+//Animacion
+$(document).ready(function(){
+  $("#ver_ocultar").click(function(){
+     if($(this).hasClass('visualizar')){
+        $(this).removeClass('visualizar');
+        $(this).html('Ocultar texto');
+        $("#caja").fadeIn(500);
+     }else{
+        $(this).addClass('visualizar');
+        $(this).html('Ver texto');
+        $("#caja").fadeOut(500);
+     }
+  });
+});

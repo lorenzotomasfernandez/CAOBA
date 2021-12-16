@@ -35,3 +35,19 @@ window.onclick = function(event) {
 function validacionEmail(e) {
   inputValue = $("#inputMail").val();
 }
+
+
+//Animacion
+$(document).ready(function(){
+  $("#ver_ocultar").click(function(){
+     if($(this).hasClass('visualizar')){
+        $(this).removeClass('visualizar');
+        $(this).html('Ocultar texto');
+        $("#caja").fadeIn(500);
+     }else{
+        $(this).addClass('visualizar');
+        $(this).html('Ver texto');
+        $("#caja").fadeOut(500);
+     }
+  });
+});
