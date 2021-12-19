@@ -97,7 +97,7 @@ function borrarCarrito() {
   carrito = [] 
 }
 
-/*productosData.map(product => {
+/* productosData.map(product => {
   listProduct += 
   `<div class="card img-producto col-md-3" style="width: 18rem;">
     <img src=../imagenes/${product.imagen} class="card-img-top" alt="...">
@@ -108,16 +108,19 @@ function borrarCarrito() {
         <button onclick="agregarAlCarrito(${product?.id})" id="btn-add-cart" class="btn btn-primary">AÑADIR AL CARRITO</button>
     </div>
   </div>`
-}) */
+}) 
 
-// product.innerHTML = listProduct;
+product.innerHTML = listProduct;
+*/
 
-const URL_PRECIOS = "./json/productosData.json";
+const URL_PRECIOS = "../json/productosData.json";
+let productosData = [];
 
-$.get(URL_PRECIOS, function(respuesta,state) {
+$.get(URL_PRECIOS, function(res,state) {
+  productosData = res;
   if (state == "success") {
-    respuesta.foreach(product => {
-      $(".row").append(
+    res.forEach(product => {
+      $("#product").append(
       `<div class="card img-producto col-md-3" style="width: 18rem;">
       <img src=../imagenes/${product.imagen} class="card-img-top" alt="...">
       <div class="card-body">
