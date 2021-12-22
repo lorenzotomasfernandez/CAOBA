@@ -20,7 +20,7 @@ let inputValue = "";
 inputEmail.addEventListener("change", validacionEmail)
 
 abrirModal.onclick = function() {
-    if (inputValue.includes("@")) {
+    if (inputValue.includes("@" && ".com")) {
       modal.style.display = "block";
     }
   }

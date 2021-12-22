@@ -9,7 +9,7 @@ let inputValue = "";
 inputEmail.addEventListener("change", validacionEmail)
 
 abrirModal.onclick = function() {
-    if (inputValue.includes("@")) {
+    if (inputValue.includes("@" && ".com")) {
       modal.style.display = "block";
     }
   }
@@ -96,22 +96,6 @@ function borrarCarrito() {
   document.getElementById('listado-carrito').innerHTML = '';
   carrito = [] 
 }
-
-/* productosData.map(product => {
-  listProduct += 
-  `<div class="card img-producto col-md-3" style="width: 18rem;">
-    <img src=../imagenes/${product.imagen} class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">${product.title}</h5>
-        <p class="card-text">${product.description}</p>
-        <p>$${product.price}</p>
-        <button onclick="agregarAlCarrito(${product?.id})" id="btn-add-cart" class="btn btn-primary">AÑADIR AL CARRITO</button>
-    </div>
-  </div>`
-}) 
-
-product.innerHTML = listProduct;
-*/
 
 const URL_PRECIOS = "../json/productosData.json";
 let productosData = [];
